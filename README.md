@@ -23,11 +23,11 @@ cd <repo-root>
 python -m pip install -e .
 ```
 
-## Run lattice sweep (5.0 Å to 5.8 Å)
+## Run lattice sweep (4.4 Å to 6.0 Å)
 
 ```bash
 cd <repo-root>
-python scripts/run_sweep.py --a-min 5.0 --a-max 5.8 --a-step 0.05 --output-dir outputs
+python scripts/run_sweep.py --a-min 4.4 --a-max 6.0 --a-step 0.05 --output-dir outputs
 ```
 
 Outputs:
