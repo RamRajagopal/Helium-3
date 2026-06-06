@@ -11,7 +11,8 @@ ALPHA = 13.353384
 # Exponential prefactor used in the short-range repulsive term.
 BETA = 0.4253785
 C6 = 1.3732412
-# Dispersion coefficient; same numeric value as BETA in the HFD-B(HE) fit.
+# C8 has the same numerical value as BETA in the HFD-B(HE) parametrization,
+# but it represents a different physical coefficient (dispersion vs repulsion prefactor).
 C8 = 0.4253785
 C10 = 0.178100
 D = 1.241314

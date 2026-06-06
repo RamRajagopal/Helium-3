@@ -113,7 +113,9 @@ def run_dmc(config: DMCConfig) -> DMCResult:
             local_arr = np.asarray(local_es, dtype=float)
 
         # Population-control feedback: penalize growth above target walkers, boost when below target.
-        eref = float(np.mean(local_arr)) - (len(walkers) - config.n_walkers) / max(config.n_walkers, 1) / config.dtau
+        population_deviation = len(walkers) - config.n_walkers
+        feedback_term = population_deviation / max(config.n_walkers, 1) / config.dtau
+        eref = float(np.mean(local_arr)) - feedback_term
 
         if step >= config.equil_steps:
             energies.append(float(np.mean(local_arr)))

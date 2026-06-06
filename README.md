@@ -13,6 +13,7 @@ Diffusion Monte Carlo (DMC) toolkit to estimate the ground-state energy of an FC
 - `helium3_dmc/dmc.py` — DMC propagator, branching, and statistics
 - `helium3_dmc/sweep.py` — lattice constant sweep and output writing
 - `scripts/run_sweep.py` — command-line sweep runner
+- `scripts/plot_energy.py` — E(a) plot generation from sweep CSV
 - `scripts/verification_checks.py` — timestep/walker sensitivity checks
 
 ## Install
@@ -32,6 +33,16 @@ python scripts/run_sweep.py --a-min 5.0 --a-max 5.8 --a-step 0.05 --output-dir o
 Outputs:
 - `outputs/energy_vs_lattice.csv`
 - `outputs/energy_vs_lattice.json`
+
+## Plot E(a)
+
+```bash
+cd <repo-root>
+python scripts/plot_energy.py --input-csv outputs/energy_vs_lattice.csv --output-png outputs/energy_vs_lattice.png
+```
+
+Output:
+- `outputs/energy_vs_lattice.png`
 
 ## Verification checks
 

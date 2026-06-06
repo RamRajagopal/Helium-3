@@ -7,7 +7,7 @@ name = "helium3-dmc"
 version = "0.1.0"
 description = "Diffusion Monte Carlo for helium FCC lattice with Aziz and Slater-Jastrow"
 requires-python = ">=3.10"
-dependencies = ["numpy>=1.23"]
+dependencies = ["numpy>=1.23", "matplotlib>=3.8"]
 
 [tool.setuptools.packages.find]
 where = ["."]
