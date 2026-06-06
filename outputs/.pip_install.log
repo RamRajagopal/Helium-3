@@ -1,0 +1,32 @@
+Defaulting to user installation because normal site-packages is not writeable
+Obtaining file:///tmp/workspace/RamRajagopal/Helium-3
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=1.23 in /home/runner/.local/lib/python3.12/site-packages (from helium3-dmc==0.1.0) (2.4.6)
+Requirement already satisfied: matplotlib>=3.8 in /home/runner/.local/lib/python3.12/site-packages (from helium3-dmc==0.1.0) (3.10.9)
+Requirement already satisfied: contourpy>=1.0.1 in /home/runner/.local/lib/python3.12/site-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /home/runner/.local/lib/python3.12/site-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/runner/.local/lib/python3.12/site-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/runner/.local/lib/python3.12/site-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (1.5.0)
+Requirement already satisfied: packaging>=20.0 in /usr/lib/python3/dist-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (24.0)
+Requirement already satisfied: pillow>=8 in /home/runner/.local/lib/python3.12/site-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (12.2.0)
+Requirement already satisfied: pyparsing>=3 in /usr/lib/python3/dist-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (3.1.1)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/lib/python3/dist-packages (from matplotlib>=3.8->helium3-dmc==0.1.0) (2.8.2)
+Building wheels for collected packages: helium3-dmc
+  Building editable for helium3-dmc (pyproject.toml): started
+  Building editable for helium3-dmc (pyproject.toml): finished with status 'done'
+  Created wheel for helium3-dmc: filename=helium3_dmc-0.1.0-0.editable-py3-none-any.whl size=2798 sha256=afc137f4eba96280cc63f9da30526d8112290a160217add05e8fa2c138a0e4fc
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i3xuaen8/wheels/96/d5/d5/974c096475efaa4b442ae6bd78549a122158791dd353dde70f
+Successfully built helium3-dmc
+Installing collected packages: helium3-dmc
+  Attempting uninstall: helium3-dmc
+    Found existing installation: helium3-dmc 0.1.0
+    Uninstalling helium3-dmc-0.1.0:
+      Successfully uninstalled helium3-dmc-0.1.0
+Successfully installed helium3-dmc-0.1.0
