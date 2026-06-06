@@ -8,8 +8,10 @@ EPSILON_K = 10.8  # Kelvin
 RM_ANGSTROM = 2.9673
 A = 0.5448504e6
 ALPHA = 13.353384
+# Exponential prefactor used in the short-range repulsive term.
 BETA = 0.4253785
 C6 = 1.3732412
+# Dispersion coefficient; same numeric value as BETA in the HFD-B(HE) fit.
 C8 = 0.4253785
 C10 = 0.178100
 D = 1.241314

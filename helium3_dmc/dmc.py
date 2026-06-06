@@ -91,9 +91,7 @@ def run_dmc(config: DMCConfig) -> DMCResult:
 
             e_loc = local_potential_energy(current, box) / n
             weight = np.exp(-(e_loc - eref) * config.dtau)
-            copies = max(0, int(weight + rng.random()))
-            if copies == 0:
-                copies = 1
+            copies = max(1, int(weight + rng.random()))
             for _ in range(copies):
                 new_walkers.append(current.copy())
                 local_es.append(e_loc)
@@ -114,6 +112,7 @@ def run_dmc(config: DMCConfig) -> DMCResult:
             walkers = np.asarray(new_walkers)
             local_arr = np.asarray(local_es, dtype=float)
 
+        # Population-control feedback: penalize growth above target walkers, boost when below target.
         eref = float(np.mean(local_arr)) - (len(walkers) - config.n_walkers) / max(config.n_walkers, 1) / config.dtau
 
         if step >= config.equil_steps:

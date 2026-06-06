@@ -6,6 +6,9 @@ import numpy as np
 
 from .lattice import minimum_image
 
+# Finite floor for near-singular determinants to avoid inf/nan in acceptance ratios.
+LOG_AMP_FLOOR = -1e6
+
 
 def jastrow_log(positions: np.ndarray, box: np.ndarray, a: float = 2.2, b: float = 1.2) -> float:
     n = positions.shape[0]
@@ -45,7 +48,7 @@ def slater_logabs_sign(positions: np.ndarray, ks: np.ndarray) -> tuple[float, fl
     det = np.linalg.det(mat)
     amp = np.abs(det)
     if amp < 1e-300:
-        return -1e6, 0.0
+        return LOG_AMP_FLOOR, 0.0
     return float(np.log(amp)), float(np.sign(det.real))
 
 
